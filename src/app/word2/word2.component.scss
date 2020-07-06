@@ -1,10 +1,8 @@
 @import '../app.component.scss';
 
 @media (orientation: portrait) {
-  .word2__img {
-    width: 200px;
-    filter: invert(100%);
-    top: 20%;
-    left: 0;
+  .word__riddle-img.man {
+    top: 30vh;
+    left: 40vw;
   }
 }

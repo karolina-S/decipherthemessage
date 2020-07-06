@@ -1,1 +1,7 @@
 @import '../app.component.scss';
+
+@media (orientation: portrait) {
+  .word__riddle-img {
+    width: 80vw;
+  }
+}
