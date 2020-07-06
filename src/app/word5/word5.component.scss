@@ -1,0 +1,40 @@
+@import '../app.component.scss';
+
+.riddles {
+  position: relative;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 45vh;
+  }
+
+  &__number {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    color: transparent;
+  }
+
+  &__img {
+    opacity: 0;
+    transition: .3s;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    filter: grayscale(1) brightness(1.5);
+    border-radius: 5%;
+
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:hover+.riddles__number {
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.word__wrapper {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.word__riddle-img {
+  width: 30vw;
+
+  &.man {
+    width: 20vw;
+    position: fixed;
+    top: 15vh;
+    left: 15vw;
+    transition: .5s;
+  }
+}
+
+.word {
+  &__riddle {
+    display: flex;
+    align-items: center;
+    width: 60vw;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    &-txt {
+      font-size: 60px;
+
+      &:hover+.man {
+        filter: invert(100%);
+      }
+    }
+
+    &-square1,
+    &-square2,
+    &-square3,
+    &-square4,
+    &-square5,
+    &-square6 {
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    &-square1.active {
+      animation: riddle .5s steps(1, end), riddle 1.5s 1s steps(1, end), riddle .5s 3s steps(1, end), riddle .5s 4s steps(1, end);
+    }
+
+    &-square2.active {
+      animation: riddle .5s steps(1, end);
+    }
+
+    &-square3.active {
+      animation: riddle 1.5s steps(1, end), riddle 1.5s 2s steps(1, end), riddle .5s 4s steps(1, end);
+    }
+
+    &-square4.active {
+      animation: riddle .5s steps(1, end), riddle .5s 1s steps(1, end);
+    }
+
+    &-square5.active {
+      animation: riddle 1.5s steps(1, end), riddle 1.5s 2s steps(1, end), riddle 1.5s 4s steps(1, end);
+    }
+
+    &-square6.active {
+      animation: riddle 1.5s steps(1, end), riddle .5s 2s steps(1, end);
+    }
+
+  }
+
+  &__input {
+    margin-top: 50px;
+    width: 300px;
+    height: 50px;
+    font-size: 36px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+}
+
+h1 {
+  font-size: 48px;
+}
+
+@keyframes riddle {
+  0% {
+    background: #cc2b5e;
+  }
+
+  100% {
+    background: #fff;
+  }
+}
+
+@media (max-width: 1000px) {
+  .word {
+    &__riddle {
+      display: flex;
+      align-items: center;
+      width: 70vw;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
+}

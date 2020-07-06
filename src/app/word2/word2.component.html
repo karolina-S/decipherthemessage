@@ -1,0 +1,9 @@
+<div class="word__wrapper">
+    <h1 class="word__title">Słowo nr 2</h1>
+    <div class="word__riddle">
+        <p class="word__riddle-txt">ŚCYTAŻ</p>
+        <img class="word__riddle-img man" src="../../assets/img/man.png" alt="">
+    </div>
+    <input type="text" class="word__input" #input (change)="checkAnswer2(input.value.toLowerCase())">
+    <p class="word__instruction">Po wpisaniu wciśnij enter</p>
+</div>
